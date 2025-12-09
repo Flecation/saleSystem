@@ -1,0 +1,18 @@
+@import url("main.css");
+
+/* for the login pane */
+.login-pane {
+    -fx-background-color: -light-pane-color;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+}
+
+/* For the forget Password label */
+#forgetBtn {
+    -fx-font-size: 15px;
+    -fx-underline: true;
+    -fx-text-fill: -forget-color;
+    -fx-cursor: hand;
+}
+
+

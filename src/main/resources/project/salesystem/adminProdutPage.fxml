@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<BorderPane fx:id="root" maxHeight="736.0" maxWidth="1153.0" minHeight="500.0" minWidth="700.0" stylesheets="@../../css/admin.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.salesystem.adminProductPageController">
+   <center>
+      <VBox spacing="10.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" />
+         </BorderPane.margin>
+         <children>
+            <TableView fx:id="productTable" VBox.vgrow="ALWAYS">
+              <columns>
+                <TableColumn fx:id="productIdCol" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="productNameCol" prefWidth="75.0" text="Name" />
+                  <TableColumn fx:id="productBrandCol" prefWidth="75.0" text="Brand" />
+                  <TableColumn fx:id="productPriceCol" prefWidth="75.0" text="Price" />
+                  <TableColumn fx:id="productStockCol" prefWidth="75.0" text="Stock" />
+                  <TableColumn fx:id="productCategoryCol" prefWidth="75.0" text="Category" />
+                  <TableColumn fx:id="productActionCol" prefWidth="75.0" text="Action" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <HBox fx:id="productProgressBox" alignment="CENTER" maxHeight="400.0" minHeight="200.0" style="-fx-background-color: red;" VBox.vgrow="NEVER" />
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <HBox maxHeight="50.0" minHeight="50.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" maxHeight="50.0" minHeight="50.0" styleClass="searchBarBox" HBox.hgrow="NEVER">
+               <children>
+                  <TextField fx:id="searchTxt" />
+                  <Button fx:id="searchBtn" mnemonicParsing="false" />
+               </children>
+            </HBox>
+            <StackPane>
+               <children>
+                  <ComboBox fx:id="categoriesComboBox" prefWidth="150.0" StackPane.alignment="CENTER">
+                     <StackPane.margin>
+                        <Insets left="10.0" top="20.0" />
+                     </StackPane.margin>
+                  </ComboBox>
+                  <Label text="Categories" StackPane.alignment="TOP_LEFT">
+                     <StackPane.margin>
+                        <Insets left="10.0" />
+                     </StackPane.margin>
+                  </Label>
+               </children>
+            </StackPane>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </HBox>
+   </top>
+   <right>
+      <VBox fx:id="infoBox" maxHeight="656.0" maxWidth="600.0" minHeight="656.0" minWidth="300.0" spacing="10.0" style="-fx-background-color: blue;" BorderPane.alignment="CENTER">
+         <children>
+            <StackPane maxHeight="130.0" minHeight="130.0">
+               <children>
+                  <ImageView fx:id="productImage" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="photoUploadBtn" mnemonicParsing="false" text="Upload" StackPane.alignment="BOTTOM_RIGHT">
+                     <StackPane.margin>
+                        <Insets right="10.0" />
+                     </StackPane.margin>
+                  </Button>
+               </children>
+            </StackPane>
+            <VBox minHeight="85.0" spacing="10.0" VBox.vgrow="NEVER">
+               <children>
+                  <Label text="Name" />
+                  <TextField fx:id="productEditNameTxt" />
+               </children>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin>
+            </VBox>
+            <VBox minHeight="85.0" spacing="10.0" VBox.vgrow="NEVER">
+               <children>
+                  <Label text="Brand" />
+                  <TextField fx:id="productEditBrandTxt" />
+               </children>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin>
+            </VBox>
+            <VBox minHeight="85.0" spacing="10.0" VBox.vgrow="NEVER">
+               <children>
+                  <Label text="Price" />
+                  <TextField fx:id="productEditPriceTxt" />
+               </children>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin>
+            </VBox>
+            <VBox minHeight="85.0" spacing="10.0" VBox.vgrow="NEVER">
+               <children>
+                  <Label text="Stock" />
+                  <TextField fx:id="prodcutEditStockTxt" />
+               </children>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin>
+            </VBox>
+            <VBox minHeight="85.0" spacing="10.0" VBox.vgrow="NEVER">
+               <children>
+                  <Label text="Category" />
+                  <ComboBox fx:id="prodcutEditCategoryTxt" prefWidth="150.0" />
+               </children>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin>
+            </VBox>
+            <HBox alignment="TOP_CENTER" minHeight="50.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Button fx:id="productEditCancelBtn" mnemonicParsing="false" text="Cancle" />
+                  <Button fx:id="productEditChangeBtn" mnemonicParsing="false" text="Change" />
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" />
+         </BorderPane.margin>
+      </VBox>
+   </right>
+</BorderPane>

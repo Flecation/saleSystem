@@ -1,0 +1,7 @@
+@import url("main.css");
+
+#menuPane {
+    -fx-background-color: -light-pane-color;
+    -fx-border-radius: 0px 15px 15px 0px;
+    -fx-background-radius: 0px 15px 15px 0px;
+}
