@@ -10,7 +10,6 @@ import javafx.scene.layout.Region;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import org.kordamp.ikonli.javafx.FontIcon;
-import org.w3c.dom.Text;
 
 public class buttonEffect {
 

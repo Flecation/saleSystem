@@ -16,6 +16,9 @@
     /*For the warning color*/
     -forget-color: #DC0000;
 
+    /*For the alert background*/
+    -alert-warning: 
+
 }
 /*For the Background of the root pane*/
 #root{

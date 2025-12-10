@@ -14,6 +14,7 @@ module project.salesystem {
     requires java.sql;
     requires javafx.graphics;
     requires com.zaxxer.hikari;
+    requires jfx.incubator.richtext;
 
     opens project.salesystem to javafx.fxml;
     exports project.salesystem;
