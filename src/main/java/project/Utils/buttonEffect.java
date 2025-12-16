@@ -66,15 +66,15 @@ public class buttonEffect {
         buttonEffect.parent = parent;
 
         FontIcon sizeIcon = new FontIcon("fas-window-restore");
-        sizeIcon.setIconSize(10);
+        sizeIcon.setIconSize(12);
         sizeBtn.setGraphic(sizeIcon);
 
         FontIcon miniIcon = new FontIcon("fas-window-minimize");
-        miniIcon.setIconSize(10);
+        miniIcon.setIconSize(12);
         miniBtn.setGraphic(miniIcon);
 
         FontIcon exitIcon = new FontIcon("fas-times");
-        exitIcon.setIconSize(10);
+        exitIcon.setIconSize(12);
         exitBtn.setGraphic(exitIcon);
 
 
