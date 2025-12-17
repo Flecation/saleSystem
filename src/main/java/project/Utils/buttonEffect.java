@@ -4,6 +4,7 @@ import javafx.animation.*;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Tooltip;
 import javafx.scene.effect.GaussianBlur;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.Region;
@@ -65,6 +66,8 @@ public class buttonEffect {
     public void setMenuButton(Parent parent, Button miniBtn, Button sizeBtn , Button exitBtn){
         buttonEffect.parent = parent;
 
+        Tooltip exit = new Tooltip("close");
+
         FontIcon sizeIcon = new FontIcon("fas-window-restore");
         sizeIcon.setIconSize(12);
         sizeBtn.setGraphic(sizeIcon);
@@ -76,6 +79,7 @@ public class buttonEffect {
         FontIcon exitIcon = new FontIcon("fas-times");
         exitIcon.setIconSize(12);
         exitBtn.setGraphic(exitIcon);
+        Tooltip.install(exitBtn, exit);
 
 
         exitBtn.setOnAction(event -> {
